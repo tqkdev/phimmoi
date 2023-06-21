@@ -1,10 +1,10 @@
 const routes = {
     home: '/',
-    phimbo: '/phimbo',
-    phimle: '/phimle',
-    quocgia: '/quocgia/:tenphim',
+    phimbo: '/phim-bo',
+    phimle: '/phim-le',
+    quocgia: '/quoc-gia/:tenphim',
     search: '/search',
-    theloai: '/theloai/:tenphim',
+    theloai: '/the-loai/:tenphim',
 };
 
 export default routes;

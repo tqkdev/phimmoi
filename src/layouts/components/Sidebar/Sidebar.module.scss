@@ -1,0 +1,30 @@
+.wrapper {
+    width: 360px;
+    padding: 30px;
+    margin-top: 20px;
+    background-color: #151414;
+}
+.main-aside {
+    background-color: transparent;
+}
+.release-year:hover ::-webkit-scrollbar {
+    display: block;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    h4 {
+        font-weight: 400;
+        font-size: 17px;
+        width: 100%;
+    }
+}
+
+.year {
+    display: flex;
+    flex-wrap: wrap;
+    height: 240px;
+    overflow: auto;
+    overflow-y: scroll;
+}

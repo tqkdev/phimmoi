@@ -1,10 +1,14 @@
 .wrapper {
+    width: 100%;
     flex-direction: column;
+    display: flex;
     align-items: center;
 }
 .container {
     display: flex;
     background-color: #756e6e;
+    height: 3000px;
+    width: 1200px;
 }
 .content {
     background-color: aqua;

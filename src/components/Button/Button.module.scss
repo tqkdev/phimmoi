@@ -1,0 +1,26 @@
+.wrapper {
+    font-weight: 400;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.8);
+}
+.icon {
+    width: 20px;
+    height: 20px;
+
+    svg path {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}

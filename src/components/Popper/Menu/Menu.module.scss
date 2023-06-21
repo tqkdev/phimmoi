@@ -1,0 +1,60 @@
+.content {
+    width: 224px;
+    padding: 10px 0;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+    border-radius: 8px;
+
+    div {
+        box-shadow: none;
+
+        button {
+            div:last-child {
+                margin-left: 32px;
+                div {
+                    input {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+.menu-item {
+    display: flex;
+    width: 100%;
+    padding: 6px 5px 6px 12px;
+    color: rgb(22, 24, 35);
+    min-height: 36px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:hover span {
+        color: #408bea;
+    }
+    &:hover div svg path {
+        color: #408bea;
+    }
+}
+
+//header
+// .header {
+//     position: relative;
+//     height: 50px;
+//     margin-top: -10px;
+// }
+
+// .btn-back {
+//     width: 50px;
+//     height: 100%;
+//     background-color: transparent;
+// }
+
+// .header-title {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
