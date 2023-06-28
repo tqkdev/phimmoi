@@ -1,0 +1,120 @@
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.inner {
+    background-color: rgba(15, 15, 15, 0.9);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 1200px;
+    padding: 40px;
+}
+.primary {
+    display: flex;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.fotlogo {
+    width: 330px;
+    img {
+        max-width: 200px;
+        height: auto;
+    }
+    p {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-top: 15px;
+
+        a {
+            color: #408bea;
+        }
+    }
+}
+
+.columenu {
+    display: flex;
+    flex: 1;
+    margin-left: 20px;
+    justify-content: space-around;
+
+    h3 {
+        font-weight: 600;
+        font-size: 15px;
+        padding: 10px 0;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            padding: 2px 0;
+
+            a {
+                font-size: 1.2rem;
+                color: #408bea;
+            }
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+.iconright {
+    display: flex;
+    // background-color: #333;
+    text-align: center;
+    .icon {
+        margin-right: 40px;
+        width: 15px;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+
+        path {
+            color: #fff;
+        }
+
+        &:hover path {
+            color: #408bea;
+        }
+    }
+}
+.icon-angleUp {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    width: 42px;
+    height: 30px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    svg {
+        font-size: 2rem;
+    }
+}
+
+// mobile width < 740px
+@media only screen and (max-width: 740px) {
+    .wrapper {
+        display: none;
+    }
+}
+
+// tablet width >= 740px and width < 1024px
+@media only screen and (min-width: 741px) and (max-width: 1024px) {
+    .fotlogo {
+        max-width: 260px;
+    }
+}

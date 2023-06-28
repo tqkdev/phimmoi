@@ -4,10 +4,10 @@ import config from '../config';
 // import { HeaderOnly } from '~/layouts';
 
 // Pages
-import Home from '../pages/Home';
-import PhimBo from '../pages/PhimBo';
-import PhimLe from '../pages/PhimLe';
-import QuocGia from '../pages/QuocGia';
+import Home from '../pages/Home/Home';
+import PhimBo from '../pages/PhimBo/PhimBo';
+import PhimLe from '../pages/PhimLe/PhimLe';
+import QuocGia from '../pages/QuocGia/QuocGia';
 import Search from '../pages/Search';
 import TheLoai from '../pages/TheLoai';
 

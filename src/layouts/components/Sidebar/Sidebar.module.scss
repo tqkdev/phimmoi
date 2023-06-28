@@ -1,7 +1,7 @@
 .wrapper {
+    right: 0;
     width: 360px;
     padding: 30px;
-    margin-top: 20px;
     background-color: #151414;
 }
 .main-aside {
@@ -21,10 +21,186 @@
     }
 }
 
-.year {
+.btn-year {
     display: flex;
     flex-wrap: wrap;
     height: 240px;
     overflow: auto;
     overflow-y: scroll;
+}
+
+.article-aside {
+    width: 100%;
+    margin: 50px 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.thamnail {
+    &:hover img {
+        filter: blur(1px);
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.7;
+    }
+}
+
+.desription {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    color: #fff;
+
+    h3 {
+        font-weight: 400;
+    }
+}
+
+//box items
+.list-item-aside .box {
+    span {
+        display: flex;
+        margin-top: 15px;
+    }
+    &:hover h5 {
+        color: #d8d8d8;
+    }
+    &:hover svg {
+        color: #408bea;
+    }
+}
+
+.box-img {
+    width: 80px;
+    height: 90px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.box-content {
+    flex: 1;
+    h5 {
+        text-align: left;
+        margin: 10px 0 0 10px;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+}
+
+.wextra {
+    display: flex;
+    margin-top: 4px;
+}
+
+.marks-star {
+    padding: 4px;
+    margin: 0 10px;
+    display: flex;
+    position: relative;
+    width: 45px;
+    height: 24px;
+    border: 1px solid #3b3b3b;
+
+    div,
+    svg {
+        font-size: 1.3rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    div {
+        left: 22px;
+    }
+}
+
+.box-year {
+    font-size: 1.3rem;
+    line-height: 24px;
+}
+
+// mobile width < 740px
+@media only screen and (max-width: 740px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .btn-year {
+        height: 100%;
+    }
+
+    .thamnail {
+        width: 50%;
+    }
+
+    .desription {
+        left: 10px;
+        bottom: 10px;
+
+        h4 {
+            font-size: 1.4rem;
+            margin-bottom: -7px;
+        }
+
+        span {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    .list-item-aside {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 50%;
+    }
+
+    .box-content {
+        h5 {
+            font-size: 1rem;
+        }
+    }
+
+    .marks-star {
+        div,
+        svg {
+            font-size: 1rem;
+        }
+    }
+    .box-year {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .box {
+        width: 100%;
+    }
+
+    .thamnail {
+        width: 100%;
+    }
+
+    .box-content {
+        h5 {
+            font-size: 1rem;
+        }
+    }
+
+    .marks-star {
+        div,
+        svg {
+            font-size: 1rem;
+        }
+    }
+    .box-year {
+        font-size: 1rem;
+    }
 }

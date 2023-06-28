@@ -2,8 +2,10 @@ import className from 'classnames/bind';
 import styles from './Sidebar.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import ButtonYear from '../../../components/ButtonYear';
+import { faCaretDown, faStar } from '@fortawesome/free-solid-svg-icons';
+import ButtonAside from '../../../components/ButtonAside';
+import images from '../../../assets/images';
+import images_aside from '../../../assets/images/images_aside';
 
 const cx = className.bind(styles);
 
@@ -62,6 +64,69 @@ const RELEASE_YEAR = [
     { title: '1972' },
 ];
 
+const LIST_ITEM_ASIDE = [
+    {
+        title: 'Cuộc Xâm Lăng Bí Mật',
+        img: images_aside.am_luong_huy_diet,
+        marks: '8.7',
+        year: '2023',
+    },
+    {
+        title: 'Khu Vườn Dối Trá',
+        img: images_aside.khu_vuon_doi_tra,
+        marks: '9',
+        year: '2023',
+    },
+    {
+        title: 'Vụng Trộm Không Thể Giấu',
+        img: images_aside.vung_trom_khong_thr_giau,
+        marks: '8.8',
+        year: '2023',
+    },
+    {
+        title: 'Nam Vương Nữ Nhi Tình',
+        img: images_aside.nam_duong_nu_nhi_tinh,
+        marks: '10',
+        year: '2023',
+    },
+    {
+        title: 'The Idol',
+        img: images_aside.the_idol,
+        marks: '6.9',
+        year: '2023',
+    },
+    {
+        title: 'Cơn Thịnh Nộ Của Becky',
+        img: images_aside.con_thinh_no_cua_becky,
+        marks: '8',
+        year: '2023',
+    },
+    {
+        title: 'Âm Lượng Hủy Diệt',
+        img: images_aside.am_luong_huy_diet,
+        marks: '7',
+        year: '2022',
+    },
+    {
+        title: 'Quái Vật Biển Sâu',
+        img: images_aside.quai_vat_bien_sau,
+        marks: '4',
+        year: '2023',
+    },
+    {
+        title: 'Cạm bẫy Tình Dục',
+        img: images_aside.cam_bay_tinh_duc,
+        marks: '5.5',
+        year: '2023',
+    },
+    {
+        title: 'Kỳ Môn Độn Giáp 2',
+        img: images_aside.ky_mon_don_giap_2,
+        marks: '10',
+        year: '2023',
+    },
+];
+
 function Sidebar() {
     return (
         <aside className={cx('wrapper')}>
@@ -71,16 +136,44 @@ function Sidebar() {
                         <h4>Năm phát hành</h4>
                         <FontAwesomeIcon icon={faCaretDown} />
                     </div>
-                    <div className={cx('year')}>
-                        {RELEASE_YEAR.map((year) => (
-                            <ButtonYear btnyear to={`/nam-phat-hanh/${year.title}`}>
+                    <div className={cx('btn-year')}>
+                        {RELEASE_YEAR.map((year, index) => (
+                            <ButtonAside key={index} to={`/nam-phat-hanh/${year.title}`}>
                                 {year.title}
-                            </ButtonYear>
+                            </ButtonAside>
                         ))}
                     </div>
                 </div>
-                <div className={cx('article-aside')}></div>
-                <div className={cx('list-item-aside')}></div>
+
+                <div className={cx('article-aside')}>
+                    <div className={cx('thamnail')}>
+                        <img src={images.article_aside} alt="thamnail" />
+                    </div>
+                    <div className={cx('desription')}>
+                        <h4>Tiếng gọi nơi hoang dã</h4>
+                        <span>2020</span>
+                    </div>
+                </div>
+
+                <div className={cx('list-item-aside')}>
+                    {LIST_ITEM_ASIDE.map((item, index) => (
+                        <ButtonAside key={index} className={cx('box')} to={'/'}>
+                            <div className={cx('box-img')}>
+                                <img src={item.img} alt={item.title} />
+                            </div>
+                            <div className={cx('box-content')}>
+                                <h5>{item.title}</h5>
+                                <div className={cx('wextra')}>
+                                    <div className={cx('marks-star')}>
+                                        <FontAwesomeIcon icon={faStar} />
+                                        <div>{item.marks}</div>
+                                    </div>
+                                    <p className={cx('box-year')}>{item.year}</p>
+                                </div>
+                            </div>
+                        </ButtonAside>
+                    ))}
+                </div>
             </div>
         </aside>
     );

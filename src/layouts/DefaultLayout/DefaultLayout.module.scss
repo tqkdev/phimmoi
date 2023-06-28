@@ -6,11 +6,56 @@
 }
 .container {
     display: flex;
-    background-color: #756e6e;
-    height: 3000px;
+    justify-content: center;
+    width: 100%;
+    background-color: #424040;
+}
+.inner {
+    display: flex;
     width: 1200px;
+    background-color: #151414;
 }
 .content {
-    background-color: aqua;
-    flex: 1;
+    // background-color: aqua;
+    // flex: 1;
+    // width: 840px;
+    width: calc(100% - 360px);
+    background-color: #151414;
+    padding: 30px 20px;
+    border-right: 1px solid #333;
+}
+
+// mobile width < 740px
+@media only screen and (max-width: 740px) {
+    .container {
+        width: 100%;
+    }
+    .inner {
+        width: 100%;
+        display: block;
+    }
+    .content {
+        width: 100%;
+        border: none;
+    }
+}
+
+// tablet width >= 740px and width < 1024px
+@media only screen and (min-width: 741px) and (max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+    .inner {
+        width: 100%;
+    }
+}
+
+// tablet width >= 1025px and width < 1200px
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+    .inner {
+        width: 100%;
+    }
 }

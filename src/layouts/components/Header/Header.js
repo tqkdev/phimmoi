@@ -10,6 +10,7 @@ import BtnQuocGiaReposive from './BtnQuocGia/BtnQuocGiaReposive';
 import BtnTheLoaiReposive from './BtnTheLoai/BtnTheLoaiReposive';
 import Search from './Search/Search';
 import { Link } from 'react-router-dom';
+import images from '../../../assets/images';
 
 const cx = className.bind(styles);
 
@@ -140,7 +141,7 @@ function Header() {
                 {/* reponsive */}
 
                 <Link to={'/'} className={cx('logo')}>
-                    <img src="https://phimmoiyyy.net/wp-content/uploads/2023/03/phimmoi.png" alt="logo" />
+                    <img src={images.logo} alt="logo" />
                 </Link>
 
                 <input type="checkbox" hidden className={cx('menu-checknox')} id="menu-checkbox-reponsive" />

@@ -31,3 +31,11 @@
     text-align: center;
     font-weight: 600;
 }
+
+// mobile width < 740px
+@media only screen and (max-width: 740px) {
+    .wrapper {
+        width: 22%;
+        margin: 3px 3px;
+    }
+}
