@@ -7,7 +7,6 @@ import images_outstand from '../../assets/images/outstand';
 
 import className from 'classnames/bind';
 import styles from './PhimBo.module.scss';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
