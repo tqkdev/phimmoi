@@ -51,7 +51,7 @@ const Article = ({ items }) => {
         <div ref={slideshowRef} className={cx('slideshow-container')}>
             <Slider {...settings}>
                 {items.map((item, index) => (
-                    <Button key={index} className={cx('poster')}>
+                    <Button to={`/movie/${item.title}`} key={index} className={cx('poster')}>
                         <div className={cx('image')}>
                             <img src={item.img} alt={item.title} />
                         </div>

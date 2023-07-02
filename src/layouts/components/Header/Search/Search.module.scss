@@ -32,13 +32,13 @@
 
     input {
         // background: rgba(255, 255, 255, 0.1);
-        background-color: #000;
+        background-color: #2d2d2d;
         caret-color: var(--white);
         width: 100%;
         height: 40px;
         color: #fff;
         font-size: 1.5rem;
-        border-radius: 5px 0 0 5px;
+        border-radius: 5px;
         padding: 0 88px 0 15px;
     }
 }
@@ -68,6 +68,8 @@
 }
 
 .btn-search {
+    text-align: center;
+    line-height: 40px;
     border-left: 1px solid #585858;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0 5px 5px 0;

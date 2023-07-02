@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
 import ItemSearch from '../ItemSearch/ItemSearch';
 import { useDebounce } from '../../../../hook';
+import Button from '../../../../components/Button/Button';
 
 const cx = className.bind(styles);
 
@@ -105,9 +106,9 @@ function Search() {
                         </button>
                     )}
 
-                    <button className={cx('btn-search')}>
+                    <Button to={`/search/${searchValue}`} className={cx('btn-search')}>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </button>
+                    </Button>
                 </div>
             </Tippy>
 

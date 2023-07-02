@@ -1,6 +1,6 @@
 import SlideShow from '../../components/SlideShow/';
-import Article from './Article/';
 import Button from '../../components/Button';
+import Article from './Article/';
 import images_article from '../../assets/images/article';
 import images_newrap from '../../assets/images/newrap';
 import images_outstand from '../../assets/images/outstand';

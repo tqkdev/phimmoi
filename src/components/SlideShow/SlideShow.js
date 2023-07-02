@@ -66,7 +66,7 @@ const Slideshow = ({ items }) => {
         <div ref={slideshowRef} className={cx('slideshow-container')}>
             <Slider {...settings}>
                 {items.map((item, index) => (
-                    <Button key={index} className={cx('poster')}>
+                    <Button to={`movie/${item.title}`} key={index} className={cx('poster')}>
                         <div className={cx('noibat')}>
                             <h5>NỔI BẬT</h5>
                         </div>
