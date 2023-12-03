@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Slider from 'react-slick';
-// import '../../../node_modules/';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Button from '../../../components/Button';
 
 import className from 'classnames/bind';
 import styles from './Article.module.scss';
+import { Link } from 'react-router-dom';
 
 const Article = ({ items }) => {
     const cx = className.bind(styles);
@@ -38,7 +37,7 @@ const Article = ({ items }) => {
         infinite: true,
         speed: 500,
         slidesToShow: slidesToShow,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         arrows: false,
         appendDots: (dots) => (
             <div>
@@ -51,18 +50,18 @@ const Article = ({ items }) => {
         <div ref={slideshowRef} className={cx('slideshow-container')}>
             <Slider {...settings}>
                 {items.map((item, index) => (
-                    <Button to={`/movie/${item.title}`} key={index} className={cx('poster')}>
+                    <div to={`/movie/${item.title}`} key={index} className={cx('poster')}>
                         <div className={cx('image')}>
                             <img src={item.img} alt={item.title} />
                         </div>
-                        <div className={cx('data')}>
+                        <Link className={cx('data')}>
                             <h3>{item.title}</h3>
                             <p>{item.year}</p>
-                        </div>
+                        </Link>
                         <div className={cx('trangthai')}>
                             <h5>HD VIETSUB</h5>
                         </div>
-                    </Button>
+                    </div>
                 ))}
             </Slider>
         </div>

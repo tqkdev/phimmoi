@@ -6,6 +6,7 @@ const routes = {
     search: '/search/:value',
     theloai: '/the-loai/:tenphim',
     movie: '/movie/:xyz',
+    notfound: '*',
 };
 
 export default routes;

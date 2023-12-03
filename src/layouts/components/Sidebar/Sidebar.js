@@ -157,7 +157,7 @@ function Sidebar() {
 
                 <div className={cx('list-item-aside')}>
                     {LIST_ITEM_ASIDE.map((item, index) => (
-                        <ButtonAside key={index} className={cx('box')} to={`movie/${item.title}`}>
+                        <ButtonAside key={index} className={cx('box')} to={`/movie/${item.title}`}>
                             <div className={cx('box-img')}>
                                 <img src={item.img} alt={item.title} />
                             </div>

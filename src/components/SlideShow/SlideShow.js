@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Slider from 'react-slick';
-// import '../../../node_modules/';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Button from '../Button/Button';
 
 import className from 'classnames/bind';
 import styles from './SlideShow.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const CustomPrevArrow = (props) => (
     <div className="custom-prev-arrow" onClick={props.onClick}>
@@ -56,7 +55,7 @@ const Slideshow = ({ items }) => {
         infinite: true,
         speed: 500,
         slidesToShow: slidesToShow,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
 
         prevArrow: <CustomPrevArrow />,
         nextArrow: <CustomNextArrow />,
@@ -66,7 +65,7 @@ const Slideshow = ({ items }) => {
         <div ref={slideshowRef} className={cx('slideshow-container')}>
             <Slider {...settings}>
                 {items.map((item, index) => (
-                    <Button to={`movie/${item.title}`} key={index} className={cx('poster')}>
+                    <div key={index} className={cx('poster')}>
                         <div className={cx('noibat')}>
                             <h5>NỔI BẬT</h5>
                         </div>
@@ -77,11 +76,11 @@ const Slideshow = ({ items }) => {
                                 <h5>HD VIETSUB</h5>
                             </div>
                         </div>
-                        <div className={cx('data')}>
+                        <Link to={`/movie/${item.title}`} className={cx('data')}>
                             <h3>{item.title}</h3>
                             <p>{item.derision}</p>
-                        </div>
-                    </Button>
+                        </Link>
+                    </div>
                 ))}
             </Slider>
         </div>
