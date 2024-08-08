@@ -34,7 +34,7 @@ function Search() {
 
         const fetchApi = async () => {
             try {
-                const res = await request.get('https://phimmoiyyy.net/wp-json/dooplay/search/', {
+                const res = await request.get('https://phimmoiiii.net/wp-json/dooplay/search/', {
                     params: {
                         keyword: debounce,
                         nonce: 'ab2604e03e',

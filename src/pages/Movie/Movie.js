@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import images_newrap from '../../assets/images/newrap';
 
 import { faFacebook, faPinterest, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { useParams } from 'react-router-dom';
 
 const cx = className.bind(styles);
 
@@ -84,6 +85,9 @@ function Movie() {
     const [showThongTin, setShowThongTin] = useState(true);
     const [showDaoDien, setShowDaoDien] = useState(false);
 
+    const params = useParams();
+    const nameMovie = params.xyz;
+
     const handleThongTinClick = () => {
         setShowThongTin(true);
         setShowDaoDien(false);
@@ -102,13 +106,13 @@ function Movie() {
 
             <div className={cx('information')}>
                 <div className={cx('poster')}>
-                    <img src="https://phimmoiyyy.net/wp-content/uploads/2023/06/The-Flash-vietsub.jpg" alt="test" />
+                    <img src="" alt={nameMovie} />
                 </div>
 
                 <div className={cx('data')}>
                     <div className={cx('times')}>
-                        <h1>The Flash</h1>
-                        <p>The Flash 2023</p>
+                        <h1>{nameMovie}</h1>
+                        <p>{nameMovie} 2023</p>
                         <div>
                             <span>Jun. 15, 2023</span>
                             <span>144 phút</span>
